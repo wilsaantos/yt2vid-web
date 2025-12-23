@@ -19,7 +19,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 24px;
-  max-width: 800px;
+  max-width: 1400px;
   width: 100%;
 }
 
@@ -60,17 +60,19 @@ main {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   padding: 32px;
+  align-items: center;
 }
 
 .input-section input {
-  padding: 20px 24px;
+  padding: 24px 32px;
   border: 1px solid rgba(168, 85, 247, 0.3);
   border-radius: 12px;
-  font-size: 16px;
+  font-size: 18px;
   background: rgba(255, 255, 255, 0.05);
   color: #ffffff;
   transition: all 0.3s ease;
-  min-height: 56px;
+  min-height: 64px;
+  width: 100%;
 }
 
 .input-section input::placeholder {
@@ -97,6 +99,8 @@ main {
   letter-spacing: 0.5px;
   transition: all 0.3s ease;
   min-height: 56px;
+  width: auto;
+  align-self: center;
 }
 
 .input-section button:hover:not(:disabled) {
@@ -445,17 +449,17 @@ main {
   }
   
   .input-section {
-    flex-direction: row;
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: center;
   }
   
   .input-section input {
-    flex: 1;
+    width: 100%;
   }
   
   .input-section button {
-    flex-shrink: 0;
     width: auto;
+    align-self: center;
   }
   
   .video-preview {
@@ -472,10 +476,19 @@ main {
 /* Desktop */
 @media (min-width: 1024px) {
   main {
-    max-width: 900px;
+    max-width: 1300px;
   }
   
   .video-preview img {
     width: 320px;
+  }
+  
+  .input-section input {
+    font-size: 20px;
+    min-height: 72px;
+    padding: 28px 36px;
+    max-width: 1000px;
+    width: 100%;
+    min-width: 600px;
   }
 }
